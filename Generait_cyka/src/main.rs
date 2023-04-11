@@ -1,5 +1,4 @@
 use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
@@ -12,9 +11,7 @@ fn main() {
     let halva:Vec<i32> = vec![1, 2];
     let mut guess = String::new();
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+    io::stdin().read_line(&mut guess).expect("Failed to read line");
 
     let guess: u32 = match guess.trim().parse() {
         Ok(num) => num,
@@ -30,8 +27,7 @@ fn main() {
     match guess {
         1 => println!("{}", pr_skupina[sluzba_1]),
         2 => println!("{}", dr_skupina[sluzba_2]),
-        12 => println!("{}, {}  \
-        {}", pr_skupina[sluzba_1], halva[halvni], dr_skupina[sluzba_2]),
+        12 => println!("{}, {}, {}", pr_skupina[sluzba_1], halva[halvni], dr_skupina[sluzba_2]),
         _ => println!("Ty jsi oplili obcane"),
     }
 }

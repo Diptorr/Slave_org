@@ -6,14 +6,14 @@ fn main() {
     println!("Write 2 to generait for second half");
     println!("Write 12 to generait for both");
 
-    let pr_skupina: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
-    let dr_skupina = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    let pr_grupe: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+    let dr_grupe = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
     let halva:Vec<i32> = vec![1, 2];
-    let mut guess = String::new();
+    let mut intp = String::new();
 
     io::stdin().read_line(&mut guess).expect("Failed to read line");
 
-    let guess: u32 = match guess.trim().parse() {
+    let intp: u32 = match guess.trim().parse() {
         Ok(num) => num,
         Err(_) => 0,
     };
@@ -25,9 +25,9 @@ fn main() {
 
     println!("Hlava otrocke operace 1.C je Quatarsky sheik Adam Tybl");
     match guess {
-        1 => println!("{}", pr_skupina[sluzba_1]),
-        2 => println!("{}", dr_skupina[sluzba_2]),
-        12 => println!("{}, {}, {}", pr_skupina[sluzba_1], halva[halvni], dr_skupina[sluzba_2]),
+        1 => println!("{}", pr_grupe[sluzba_1]),
+        2 => println!("{}", dr_grupe[sluzba_2]),
+        12 => println!("{}, {}, {}", pr_grupe[sluzba_1], halva[halvni], dr_skupina[sluzba_2]),
         _ => println!("Ty jsi oplili obcane"),
     }
 }

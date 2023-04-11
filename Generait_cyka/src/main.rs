@@ -29,18 +29,18 @@ fn main() {
     };
     let intp_fin = intp + intp_2;
 
-    let halvni = rand::thread_rng().gen_range(0..=1);
+    let main = rand::thread_rng().gen_range(0..=1);
     let sluzba_1 = rand::thread_rng().gen_range(0..13);
     let sluzba_2 = rand::thread_rng().gen_range(0..14);
 
     println!("Hlava otrocke operace 1.C je Quatarsky sheik Adam Tybl");
     match intp_fin {
         0 => println!("{}", pr_skupina[sluzba_1]),
-        1 => println!("{} jako {}", pr_skupina[sluzba_1], halva[halvni]),
+        1 => println!("{} jako {}", pr_skupina[sluzba_1], halva[main]),
         3 => println!("{} ", dr_skupina[sluzba_2]),
-        4 => println!("{} jako {}", pr_skupina[sluzba_2], halva[halvni]),
+        4 => println!("{} jako {}", pr_skupina[sluzba_2], halva[main]),
         12 => println!("{} jakozto {}
-a  {}", pr_skupina[sluzba_1], halva[halvni],  dr_skupina[sluzba_2]),
+a  {}", pr_skupina[sluzba_1], halva[main],  dr_skupina[sluzba_2]),
         _ => println!("Ty jsi oplili obcane"),
     }
 }
